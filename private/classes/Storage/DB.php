@@ -5,7 +5,7 @@ class DB
 {
     private $table_name = null;
     private $connection = null;
-    public function __construct($table_name) {
+    public function __construct(string $table_name) {
         $this->table_name = $table_name;
         $this->conn = new \mysqli(DB_SERVER_NAME, DB_USERNAME, DB_PASSWORD, DB_NAME);
         if ($this->conn->connect_error) {
@@ -17,7 +17,7 @@ class DB
         $this->conn->close();
     }
     
-    public function addEntry($entry) {
+    public function addEntry(array $entry) {
         $column_str = '';
         $value_str = '';
         foreach ($entry as $key => $value) {
