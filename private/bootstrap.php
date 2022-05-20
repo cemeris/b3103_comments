@@ -1,6 +1,9 @@
 <?php
 
 define('DEBUG_MODE', true);
+define('PRIVATE_DIR', __DIR__ . '/');
+define('UPLOAD_DIR', PRIVATE_DIR . 'uploads/');
+
 define('DB_SERVER_NAME', 'localhost');
 define('DB_NAME', 'bootcamp3103');
 define('DB_USERNAME', 'root');
